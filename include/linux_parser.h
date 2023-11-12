@@ -7,6 +7,7 @@
 #include <regex>
 #include <string>
 
+// making namespace for LinuxParser
 namespace LinuxParser {
 // paths
 const std::string kProcDirectory{"/proc/"};
