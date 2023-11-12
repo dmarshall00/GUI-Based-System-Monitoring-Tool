@@ -4,6 +4,7 @@
 
 #include <string>
 
+// making namespace for Format
 namespace Format {
     std:: string TimePassed(long times);
 };
