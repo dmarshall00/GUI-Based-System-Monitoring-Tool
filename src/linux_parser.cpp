@@ -9,10 +9,7 @@
 
 #include "linux_parser.h"
 
-using std::stof;
-using std::string;
-using std::to_string;
-using std::vector;
+using namespace.std;
 
 // strings will be split into a vector of strings by spaces
 vector<string> splitString(string s) {
