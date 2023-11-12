@@ -24,14 +24,14 @@ string Format::TimePassed(long seconds) {
         hours1 = std::to_string(hours)
     }
 
-    if ((minutes % 60) < 10) {
+    if((minutes % 60) < 10) {
         minutes1 = "0" + std::to_string(minutes % 60);
     }
     else {
         minutes1 = std::to_string(minutes % 60);
     }
 
-    if ((seconds % 60) < 10) {
+    if((seconds % 60) < 10) {
         seconds1 = "0" + std::to_string(seconds % 60);
     }
     else {
