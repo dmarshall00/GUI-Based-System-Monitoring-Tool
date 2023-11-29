@@ -56,7 +56,7 @@ void NCursesDisplay::DisplaySystem(System &system, WINDOW *window) {
   wrefresh(window);
 }
 
-void NCursesDisplay::DisplayProcesses(std::vector<Process> &processes,
+/*void NCursesDisplay::DisplayProcesses(std::vector<Process> &processes,
                                       WINDOW *window, int n) {
   int row{0};
   int const pid_column{2};
@@ -88,7 +88,7 @@ void NCursesDisplay::DisplayProcesses(std::vector<Process> &processes,
     mvwprintw(window, row, command_column,
               processes[i].Command().substr(0, window->_maxx - 46).c_str());
   }
-}
+}*/
 
 void NCursesDisplay::Display(System &system, int n) {
   initscr();     // start ncurses
