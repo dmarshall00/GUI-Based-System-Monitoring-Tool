@@ -107,7 +107,7 @@ void NCursesDisplay::Display(System &system, int n) {
     box(system_window, 0, 0);   //box encapsulates both windows to show seperation in UI
     box(process_window, 0, 0);
     DisplaySystem(system, system_window);
-    DisplayProcesses(system.Processes(), process_window, n);
+    //DisplayProcesses(system.Processes(), process_window, n);
     wrefresh(system_window); //refresh both windows to display updated information
     wrefresh(process_window);
     refresh();
