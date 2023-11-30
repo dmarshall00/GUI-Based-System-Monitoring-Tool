@@ -90,7 +90,7 @@ void NCursesDisplay::DisplaySystem(System &system, WINDOW *window) {
   }
 }*/
 
-void NCursesDisplay::Display(System &system, int n) {
+void NCursesDisplay::Display(System &system) {
   initscr();     // start ncurses
   noecho();      // do not print input values
   cbreak();      // terminate ncurses on ctrl + c
@@ -98,18 +98,18 @@ void NCursesDisplay::Display(System &system, int n) {
 
   int x_max{getmaxx(stdscr)};
   WINDOW *system_window = newwin(9, x_max - 1, 0, 0); //creates windows for process and system information
-  WINDOW *process_window =
-      newwin(3 + n, x_max - 1, system_window->_maxy + 1, 0);
+ // WINDOW *process_window =
+     // newwin(3 + n, x_max - 1, system_window->_maxy + 1, 0);
 
   while (1) {  //infinite loop to constantly display the system
     init_pair(1, COLOR_BLUE, COLOR_BLACK);
     init_pair(2, COLOR_GREEN, COLOR_BLACK);
     box(system_window, 0, 0);   //box encapsulates both windows to show seperation in UI
-    box(process_window, 0, 0);
+    //box(process_window, 0, 0);
     DisplaySystem(system, system_window);
     //DisplayProcesses(system.Processes(), process_window, n);
     wrefresh(system_window); //refresh both windows to display updated information
-    wrefresh(process_window);
+   // wrefresh(process_window);
     refresh();
     std::this_thread::sleep_for(std::chrono::seconds(1));  //pause for 1 sec
   }
